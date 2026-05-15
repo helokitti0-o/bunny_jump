@@ -1,0 +1,63 @@
+#services {
+    background: #eee;
+    padding: 7rem 6%;
+    text-align: center;
+}
+
+.section-sub {
+    font-family: cursive;
+    color: #6f8f3e;
+    margin-bottom: 0.3rem;
+}
+
+.section-title {
+    letter-spacing: 4px;
+    margin-bottom: 4rem;
+}
+
+.services-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 3rem;
+}
+
+.service-card {
+    background: #fff;
+    border-radius: 16px;
+    overflow: hidden;
+    box-shadow: 0 15px 30px rgba(0,0,0,0.1);
+    transition: 0.3s;
+}
+
+.service-card:hover {
+    transform: translateY(-10px);
+}
+
+.service-card img {
+    width: 100%;
+    height: 220px;
+    object-fit: cover;
+}
+
+.service-content {
+    background: #6f8f3e;
+    padding: 2rem 1rem;
+    color: #fff;
+}
+
+.service-content h4 {
+    margin-bottom: 1.2rem;
+    letter-spacing: 2px;
+    font-size: 0.95rem;
+}
+
+.btn-light {
+    display: inline-block;
+    padding: 8px 22px;
+    background: #fff;
+    color: #6f8f3e;
+    text-decoration: none;
+    border-radius: 20px;
+    font-weight: bold;
+    font-size: 0.85rem;
+}

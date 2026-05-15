@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <title>Lab – Tích hợp tiện ích</title>
+    <link rel="stylesheet" href="Lab7.2Man1.css">
+</head>
+<body>
+
+<h1 class="title">BÀI 1 – TÍCH HỢP CÁC TIỆN ÍCH</h1>
+
+<section class="slideshow">
+    <img src="https://images.unsplash.com/photo-1511920170033-f8396924c348" class="slide active">
+    <img src="https://images.unsplash.com/photo-1509042239860-f550ce710b93" class="slide">
+    <img src="https://images.unsplash.com/photo-1523294587484-bae6cc870010" class="slide">
+</section>
+
+<section class="post">
+    <h2>Bài viết giới thiệu</h2>
+    <p>
+        Trà không chỉ là thức uống mà còn là nghệ thuật thư giãn.
+        Chúng tôi mang đến những hương vị trà tinh tế nhất.
+    </p>
+
+    <div class="actions">
+        <button id="likeBtn">👍 Like (<span id="likeCount">0</span>)</button>
+        <button onclick="alert('Đã share bài viết!')">🔗 Share</button>
+    </div>
+</section>
+
+<section class="video">
+    <h2>Video giới thiệu</h2>
+    <iframe width="560" height="315"
+        src="https://www.youtube.com/embed/6CqzjvY0f2w"
+        allowfullscreen>
+    </iframe>
+</section>
+
+<section class="comment">
+    <h2>Bình luận</h2>
+    <input type="text" id="commentInput" placeholder="Nhập bình luận...">
+    <button onclick="addComment()">Gửi</button>
+
+    <ul id="commentList"></ul>
+</section>
+
+<script>
+let likes = 0;
+document.getElementById("likeBtn").onclick = () => {
+    likes++;
+    document.getElementById("likeCount").innerText = likes;
+};
+
+function addComment() {
+    const input = document.getElementById("commentInput");
+    if (input.value.trim() === "") return;
+
+    const li = document.createElement("li");
+    li.innerText = input.value;
+    document.getElementById("commentList").appendChild(li);
+    input.value = "";
+}
+
+let index = 0;
+const slides = document.querySelectorAll(".slide");
+
+setInterval(() => {
+    slides[index].classList.remove("active");
+    index = (index + 1) % slides.length;
+    slides[index].classList.add("active");
+}, 3000);
+</script>
+
+</body>
+</html>
+
+</body>
+</html>

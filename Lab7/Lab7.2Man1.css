@@ -1,0 +1,70 @@
+* {
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    background: #f4f4f4;
+    padding: 20px;
+}
+
+.title {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.slideshow {
+    max-width: 600px;
+    margin: auto;
+    position: relative;
+}
+
+.slide {
+    width: 100%;
+    display: none;
+    border-radius: 10px;
+}
+
+.slide.active {
+    display: block;
+}
+
+.post {
+    background: #fff;
+    padding: 20px;
+    margin: 30px auto;
+    max-width: 600px;
+    border-radius: 10px;
+}
+
+.actions button {
+    padding: 8px 15px;
+    margin-right: 10px;
+    cursor: pointer;
+}
+
+.video {
+    text-align: center;
+    margin: 40px 0;
+}
+
+.comment {
+    background: #fff;
+    padding: 20px;
+    max-width: 600px;
+    margin: auto;
+    border-radius: 10px;
+}
+
+.comment input {
+    width: 70%;
+    padding: 8px;
+}
+
+.comment button {
+    padding: 8px 15px;
+}
+
+.comment ul {
+    margin-top: 15px;
+}
